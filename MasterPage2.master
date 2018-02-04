@@ -1,0 +1,426 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>KU</title>
+    <script src="jquery-2.1.3.min.js"></script>
+
+<%--    <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet" />
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>--%>
+
+    <%--<link href="dist/css/bootstrap-datepicker3.css" rel="stylesheet" />--%>
+<%--    <script src="dist/js/bootstrap-datepicker-custom.js"></script>
+    <script src="dist/locales/bootstrap-datepicker.th.min.js" charset="UTF-8"></script>--%>
+
+
+    <!-- test datepicker -->
+    
+    <%--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    --%>
+    
+   <%-- <script>
+        $(document).ready(function () {
+            $('.datepicker').datepicker({
+                format: 'dd MM yyyy',
+                todayBtn: true,
+                language: 'th',             //เปลี่ยน label ต่างของ ปฏิทิน ให้เป็น ภาษาไทย   (ต้องใช้ไฟล์ bootstrap-datepicker.th.min.js นี้ด้วย)
+                thaiyear: true              //Set เป็นปี พ.ศ.
+                //                dateFormat: 'dd MM yy',
+                //firstDay: 0,
+                //isRTL: false,
+                //isBuddhist: true,
+                //minDate: '',
+                //maxDate: '' + ''
+
+            })  //กำหนดเป็นวันปัจุบัน
+
+        });
+    </script>--%>
+
+
+    <!-- Bootstrap Core CSS -->
+<%--    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>--%>
+
+    <%--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap2/css/bootstrap-responsive.min.css" rel="stylesheet"/>--%>
+    <link href="vendor/bootstrap2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="vendor/bootstrap2/css/bootstrap-responsive.min.css" rel="stylesheet"/>
+    
+
+
+
+    <!-- Custom Fonts -->
+<%--    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>--%>
+
+    <!-- Plugin CSS -->
+
+    <!-- Theme CSS -->
+    <link href="css/creative.css" rel="stylesheet">
+  <%--  ======-============================================== Jqyuery vender slide navigator =========================================--%>
+<%--     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>--%>
+      <%--  <script type="text/javascript" src="    http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.js></script>--%>
+
+      <%--  ======-============================================== Jqyuery datepicker =========================================--%>
+      <link rel="stylesheet" media="all" type="text/css" href="../datepicker2/css/sunny/jquery-ui-1.9.2.custom.css" />
+      <%--<link rel="stylesheet" media="all" type="text/css" href="../datepicker3/css/ui-lightness/jquery-ui-1.8.10.custom.css" />--%>
+  
+    <script type="text/javascript" src="../datepicker3/js/jquery-1.4.4.min.js"></script>
+    <%--<script type="text/javascript" src="https://ajax.googleapis.scom/ajax/libs/jquery/1.9.1/jquery.min.js"></script>--%>
+    <script type="text/javascript" src="../datepicker3/js/jquery-ui-1.8.10.offset.datepicker.min.js"></script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+            <script type="text/javascript">
+
+                //var datepicked = function () {
+
+                //}
+
+                //jQuery.noConflict();
+                //jQuery(document).ready(function ()
+                //$.noConflict();
+                //jQuery(document).ready(function ()
+
+                $(function () {
+
+                    $('#datepicker').datepicker({
+
+
+                        monthNames: ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน',
+                            'กรกฏาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'],
+                        monthNamesShort: ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.',
+                            'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'],
+                        dayNames: ['อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์'],
+                        dayNamesShort: ['อา.', 'จ.', 'อ.', 'พ.', 'พฤ.', 'ศ.', 'ส.'],
+                        dayNamesMin: ['อา.', 'จ.', 'อ.', 'พ.', 'พฤ.', 'ศ.', 'ส.'],
+                        dateFormat: 'dd MM yy',
+                        firstDay: 0,
+                        isRTL: false,
+                        isBuddhist: true,
+                        minDate: '',
+                        maxDate: '' + ''
+                    })
+
+                });
+    //var datepicked = function () {
+
+    //}
+
+    //$(function () {
+    //    $("#datepickerr").datepicker({ dateFormat: 'dd/mm/yy', isBuddhist: true, defaultDate: toDay })
+
+
+    //});
+
+</script>
+
+<style type="text/css">
+    .top_header{
+        margin-top:7em;
+    }
+    html {
+    background: url(polished-stucco-texture_23-2147506837.gif) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+ .black-ribbon {
+  position: fixed;
+  z-index: 9999;
+  width: 70px;
+}
+@media only all and (min-width: 768px) {
+  .black-ribbon {
+    width: auto;
+  }
+}
+
+.stick-left { left: 0; }
+.stick-right { right: 0; }
+.stick-top { top: 0; }
+.stick-bottom { bottom: 0; }
+    </style>
+    <style>
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ body {
+            background-color: #fff; /*rgb(22, 160, 133);*/
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+</style>
+
+
+
+    <style>
+
+    </style>
+</head>
+
+<body style="">
+    <form id="form1" runat="server">
+        <%--<img src="img_chania.jpg" width="460" height="345">--%>
+
+        <%--<div class="container-fluid">--%>
+        <div class="container-fluid">
+            <div class="row">
+            <nav id="mainNav" class="navbar navbar-default" style="">
+                <img style="height:80px;" src="/images/head_logo_sci.png" />
+            </nav>
+            </div>
+            <div class="row-fluid">
+                <%--<div class="row-fluid">--%>
+                        <div class="span3">
+                            <div id="page-one" style="border-left-color:4px blue groove;top:100px;padding-left:10px;padding-right:10px;padding-bottom:10px;text-align:center;background-color:rgb(180,230,245);border:4px black groove;border-bottom:4px black groove;border-right:4px blue groove ; ">   
+            <%--  <label for= "exampleInputEmail1" > Email address </label> 
+                <input type= "email" class= "form-control" id= "exampleInputEmail1" placeholder= "Email" > --%>
+
+                                <%--<div class="login" style="padding-left:10px;padding-right:10px;padding-bottom:10px;text-align:center;background-color:rgb(180,230,245);border:4px black groove;border-bottom:4px black groove;border-right:4px blue groove ">--%>
+                                
+                                <img src="/images/login2.png" class="form-control"/> <br /><br />
+                                <asp:TextBox ID="txtid2" Width="100%" placeholder="User Name" runat="server" BorderWidth="2px" BorderColor="GrayText" BorderStyle="Groove" Height="30px"></asp:TextBox> <br />
+                                <asp:TextBox ID="Txtpass2" Width="100%"  placeholder="Password" TextMode="Password" BorderWidth="2px" BorderColor="GrayText" BorderStyle="Groove" Height="30px" runat="server"></asp:TextBox> <br /><br />
+                                <asp:Button ID="Button2" class="btn btn-info form-control" runat="server" Text="เข้าสู่ระบบ" OnClick="Button2_Click" />
+                            
+                                <%--</div>--%><%-- login --%>  <%-- login --%>  <%-- login --%> 
+                            </div>  <%-- page-one --%> <%-- page-one --%> <%-- page-one --%>
+                        </div> <%-- span2 --%> <%-- span2 --%> <%-- span2 --%>
+                        <div class="span9">
+                            <br />
+                            <table class="table"  style="/*margin-top:25px;*//*width:950px;margin-left:325px;*/">
+                            <thead>
+                                <tr class=""  style="solid 0px green;-webkit-border-radius:10px;
+                                -moz-border-radius:100px;
+                                border-radius:10px;
+    
+                                background: rgba(179,220,237,1);
+                                background: -moz-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 60%, rgba(188,224,238,1) 100%);
+                                background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179,220,237,1)), color-stop(60%, rgba(41,184,229,1)), color-stop(100%, rgba(188,224,238,1)));
+                                background: -webkit-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 60%, rgba(188,224,238,1) 100%);
+                                background: -o-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 60%, rgba(188,224,238,1) 100%);
+                                background: -ms-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 60%, rgba(188,224,238,1) 100%);
+                                background: linear-gradient(to bottom, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 60%, rgba(188,224,238,1) 100%);
+                                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=0 );
+                                ">
+                                    <td><b>ตารางเรียน</b></td>
+                                </tr>
+                            </thead>
+                            </table>
+                         <div class="row-fluid">
+                             
+                            <div class="span11 offset1 ">
+                                    <div class="form-horizontal form-group" style="margin-bottom: 1em;">
+                                        <div class= "form-group" > 
+                                            <%--<label for= "inputEmail3" class= "col-sm-2 control-label" > Email </label>--%>
+                                            <asp:Label ID="Label1" class="col-sm-2 control-label" runat="server" Text="ห้อง"></asp:Label>
+                                            
+                                                <div class= "col-sm-10" > 
+                                            <%--<input type= "email" class= "form-control" id= "inputEmail3" placeholder= "Email" >--%> 
+                                                    <asp:DropDownList ID="ddl_id_lab" class="form-control" runat="server" Font-Bold="True" BorderWidth="2px" BorderColor="GrayText" BackColor="#FFFFCC" AutoPostBack="True"></asp:DropDownList>
+                                               
+                                                    </div> 
+                                        </div>
+                                        <div class= "form-group" style="margin-top:7px" > 
+                                    <asp:Label ID="Label3" class="col-sm-2 control-label" runat="server" Text="วันที่"></asp:Label>
+                                                <div class= "col-sm-10" > 
+                                                    <span class="input-append form-control" style="text-align:center;">
+                                        
+                                        <asp:TextBox ID="datepicker"  CssClass="datepicker" runat="server" BorderWidth="2px" BorderColor="GrayText" Height="31" style="left: 0px; top: 0px;"></asp:TextBox>
+                                        <span class="input-group-addon">
+                                            <span class="add-on">
+                                                <i class="icon-calendar" ></i></span>
+                                        
+                                        </span>
+                                      <asp:Button ID="Button1" class="btn btn-info" runat="server" Text="ดูตารางเวลา" OnClick="Button1_Click" Height="31px" />
+                                        
+                                   </span>
+                                   
+                                            </div>
+
+                                      </div>
+                                    <%--<asp:Label ID="Label1" class="form-control" runat="server" Text="ห้อง"></asp:Label>--%>
+                                
+                                    <%--<asp:DropDownList ID="ddl_id_lab" Width="100%" class="form-control" runat="server" Font-Bold="True" BorderWidth="2px" BorderColor="GrayText" BackColor="#FFFFCC" AutoPostBack="True"></asp:DropDownList>--%>
+                                    </div>
+                                    
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                         <div class="form-group" style="margin-bottom: 1em;">
+      <%--  <label for="id_reserve">เลขที่คำขอ:</label>
+        <input name="id_reserve" class="form-control" id="id_reserve" value="" size="6" type="text">--%>
+        </div>
+                                    <%--<asp:Label ID="Label3"  runat="server" Text="วันที่"></asp:Label>--%>
+                                    
+                                    <%--<span class="input-append form-control" style="text-align:center;">
+                                        
+                                        <asp:TextBox ID="datepicker"  CssClass="datepicker" runat="server" BorderWidth="2px" BorderColor="GrayText" Height="31" style="left: 0px; top: 0px;"></asp:TextBox>
+                                        <span class="input-group-addon">
+                                            <span class="add-on">
+                                                <i class="icon-calendar" ></i></span>
+                                        
+                                        </span>
+                                      <asp:Button ID="Button1" class="btn btn-info" runat="server" Text="ดูตารางเวลา" OnClick="Button1_Click" Height="31px" />
+                                        
+                                   </span>
+                                   --%>
+                                     </div> 
+                                       
+
+                                </div>
+          <%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                                               <asp:UpdatePanel runat="server" id="UpdatePanel" updatemode="Conditional">
+            <ContentTemplate>
+asdfas                <asp:Button ID="Button3" runat="server" Text="Button" OnClick="Button3_Click" />
+                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                </ContentTemplate>
+                                                   </asp:UpdatePanel>--%>
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <div class="table-responsive" style="overflow-x:auto;">
+                                            <asp:Literal id="ltrlctrl1" runat="server" Visible="true" />     
+
+                                        </div> <%--close table-responsive--%>
+                                    </div> <%--close table-span--%>
+                                </div>  <%--close row-fluid--%>
+                            </div> <%--close rowfluid--%>
+                         </div>   
+                       </div>
+        <div class="container">
+                      <div class="row-fluid " style="overflow-x:auto">                                                                                               
+ 	                    <table border="2" class="" width="90%"style="margin-top:10px;">
+                            <asp:Repeater id="myRepeater" runat="server" onItemDataBound="myRepeater_ItemDataBound">
+	                        <HeaderTemplate>
+                                <colgroup>
+                                    <col class="col-sm-3">
+                                    <col class="col-sm-3">
+                                    <col class="col-sm-3">
+                                    <col class="col-sm-3">
+                                    <col class="col-sm-3">
+                                    <col class="col-sm-3">
+                                </colgroup>
+                            <tr cellspacing="0" cellpadding="2"  style="background-color:#ffed80;">
+                                <th colspan="6" style="color:blue;"><h4>จองรายเทอม</h4></th>
+                            </tr>
+                            <tr cellspacing="0" cellpadding="2"  style="background-color:aquamarine;">
+	    		                <th style="text-align:center;">ห้อง</th>
+	    	                    <th style="text-align:center;">รหัสวิชา</th>
+			                    <th style="text-align:center;">รายชื่อวิชา</th>
+				                <th style="text-align:center;">เวลา</th>
+				                <th style="text-align:center;">หมู่เรียน</th>
+	                            <th style="text-align:center;">อ.ผู้สอน</th>
+                           </tr>
+                           </HeaderTemplate>
+                            <ItemTemplate>
+		                       <tr style="background:rgba(188,224,238,1)">
+			                    <td style="text-align:center;"><asp:Label id="lblroom" runat="server"></asp:Label></td>
+			                    <td style="text-align:center;"><asp:Label id="lblidsub" runat="server"></asp:Label></td>
+			                    <td style="text-align:center;"><asp:Label id="lblnamesub" runat="server"></asp:Label></td>
+                                <td style="text-align:center;"><asp:Label id="lblstart" runat="server"></asp:Label></td>
+			                    <td style="text-align:center;"><asp:Label id="lblsec" runat="server"></asp:Label></td>
+			                    <td style="text-align:center;"><asp:Label id="lblteacher" runat="server"></asp:Label></td>
+                              </tr>		
+	                        </ItemTemplate>
+                                <AlternatingItemTemplate>
+                                <tr bgcolor="#e8e8e8">
+			                    <td style="text-align:center;"><asp:Label id="lblroom" runat="server"></asp:Label></td>
+			                    <td style="text-align:center;"><asp:Label id="lblidsub" runat="server"></asp:Label></td>
+			                    <td style="text-align:center;"><asp:Label id="lblnamesub" runat="server"></asp:Label></td>
+                                <td style="text-align:center;"><asp:Label id="lblstart" runat="server"></asp:Label></td>
+			                    <td style="text-align:center;"><asp:Label id="lblsec" runat="server"></asp:Label></td>
+			                    <td style="text-align:center;"><asp:Label id="lblteacher" runat="server"></asp:Label></td>
+
+                                </tr>
+                                </AlternatingItemTemplate>
+	                        </asp:Repeater>
+	                    </table>
+
+
+                           <table border="2" class="table-responsive" width="90%"style="text-align:center;margin-top:10px;">
+                    <asp:Repeater id="myRepeater2" runat="server" onItemDataBound="myRepeater2_ItemDataBound">
+	                <HeaderTemplate>
+                    <tr cellspacing="0" cellpadding="2" style="background-color:#ffed80;">
+                        <th colspan="6" style="color:blue;"><h4>จองรายวัน</h4></th>
+                    </tr>
+			        <tr cellspacing="0" cellpadding="2" style="background-color:aquamarine;">
+				            <th style="text-align:center;">ห้อง</th>
+				            <th style="text-align:center;">ผู้จอง</th>
+				            <th style="text-align:center;">เวลา</th>
+				            <th style="text-align:center;">วันที่จอง</th>
+				            <th style="text-align:center;">ณ เวลาที่ทำจอง</th>
+				            <th style="text-align:center;">เหตุที่จอง</th>				                                        
+
+
+                    </tr>
+	                </HeaderTemplate>
+	                <ItemTemplate>
+		               		 <tr style="background:rgba(188,224,238,1)">
+
+			            <%--    <td><asp:CheckBox id="chkCustomerID" runat="server"></asp:CheckBox></td>	--%>
+			                <td style="text-align:center;"><asp:Label id="lblroom_b" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblid_b" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblstart_b" runat="server"></asp:Label></td>
+			                <%--<td style="text-align:center;"><asp:Label id="lblend_b" runat="server"></asp:Label></td>--%>
+                            <td style="text-align:center;"><asp:Label id="lbldateloan_b" runat="server"></asp:Label></td>
+                            <td style="text-align:center;"><asp:Label id="lbldate_b" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblreason_b" runat="server"></asp:Label></td>
+
+
+
+                      </tr>		
+	                </ItemTemplate>
+                        
+                            <AlternatingItemTemplate>
+                            <tr bgcolor="#e8e8e8">
+                            <td style="text-align:center;"><asp:Label id="lblroom_b" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblid_b" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblstart_b" runat="server"></asp:Label></td>
+			                <%--<td style="text-align:center;"><asp:Label id="lblend_b" runat="server"></asp:Label></td>--%>
+                            <td style="text-align:center;"><asp:Label id="lbldateloan_b" runat="server"></asp:Label></td>
+                            <td style="text-align:center;"><asp:Label id="lbldate_b" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblreason_b" runat="server"></asp:Label></td>
+
+                            </tr>
+                              </AlternatingItemTemplate>
+	                </asp:Repeater>
+	                </table>
+
+                          </div>
+                 </div>
+ 
+            
+         
+      </form>
+    
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+    <script src="vendor/bootstrap2/js/bootstrap.min.js/bootstrap.min.js"></script>
+
+    
+</body>
+
+</html>
+

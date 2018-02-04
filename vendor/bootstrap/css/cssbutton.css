@@ -1,0 +1,192 @@
+﻿.myButt {
+    outline: none;
+    border: none;
+    padding: 20px;
+    display: block;
+    margin: 50px auto;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: transparent;
+    position: relative;
+    border: 2px solid #fff;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+}
+
+.one {
+    border-color: #fff;
+    overflow: hidden;
+    color: #fff;
+    background-color: #5bc0de;
+}
+
+     .insider {
+        background-color: #fff;
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        left: -135px;
+        transform: rotateZ(45deg);
+        -webkit-transform: rotateZ(45deg);
+        -moz-transform: rotateZ(45deg);
+        -o-transform: rotateZ(45deg);
+        -ms-transform: rotateZ(45deg);
+    }
+
+    .one:hover {
+        background-color: #31b0d5;
+        border-color: #fff;
+        color: #fff;
+    }
+
+        .one:hover .insider {
+            transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            left: 135px;
+        }
+
+.two {
+    color: #fff;
+}
+
+    .two:hover {
+        border-color: #F44336;
+        color: #F44336;
+        animation: shakeThatBooty 0.3s linear 1;
+        -webkit-animation: shakeThatBooty 0.3s linear 1;
+        -moz-animation: shakeThatBooty 0.3s linear 1;
+        -o-animation: shakeThatBooty 0.3s linear 1;
+        -ms-animation: shakeThatBooty 0.3s linear 1;
+    }
+
+@keyframes shakeThatBooty {
+    33% {
+        transform: rotateZ(10deg);
+        -webkit-transform: rotateZ(10deg);
+        -moz-transform: rotateZ(10deg);
+        -o-transform: rotateZ(10deg);
+        -ms-transform: rotateZ(10deg);
+    }
+
+    67% {
+        transform: rotateZ(-10deg);
+        -webkit-transform: rotateZ(-10deg);
+        -moz-transform: rotateZ(-10deg);
+        -o-transform: rotateZ(-10deg);
+        -ms-transform: rotateZ(-10deg);
+    }
+
+    100% {
+        transform: rotateZ(10deg);
+        -webkit-transform: rotateZ(10deg);
+        -moz-transform: rotateZ(10deg);
+        -o-transform: rotateZ(10deg);
+        -ms-transform: rotateZ(10deg);
+    }
+}
+
+.three {
+    color: #fff;
+    border-color: transparent;
+}
+
+    .three:before, .three:after {
+        width: 0;
+        height: 3px;
+        content: " ";
+        background-color: #F44336;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+    }
+
+    .three:after {
+        top: 100%;
+    }
+
+    .three:hover {
+        letter-spacing: 8px;
+        color: #F44336;
+    }
+
+        .three:hover:before, .three:hover:after {
+            width: 100%;
+            left: 0;
+        }
+
+        .three:hover:after {
+            width: 100%;
+            left: 0;
+        }
+
+.four {
+    overflow: hidden;
+}
+
+    .four span {
+        color: #fff;
+        display: inline-block;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+    }
+
+    .four .icon {
+        position: absolute;
+        left: -60px;
+        top: 0;
+        color: #fff;
+        padding: 20px;
+        background-color: #F44336;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+    }
+
+    .four:hover .icon {
+        left: 0px;
+    }
+
+    .four:hover span {
+        color: #F44336;
+        margin-left: 50px;
+    }
+
+.five {
+    overflow: hidden;
+    color: #fff;
+}
+
+    .five .layer {
+        color: #fff;
+        position: absolute;
+        top: -70px;
+        width: 100%;
+        left: 0;
+        padding: 20px 0;
+        background-color: #F44336;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+    }
+
+    .five:hover .layer {
+        top: 0;
+    }

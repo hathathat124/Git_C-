@@ -1,0 +1,82 @@
+﻿<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>Single Page Sliding Navigation Demo</title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="shortcut icon" href="http://vandelaydesign.com/favicon.ico">
+  <link rel="icon" href="http://vandelaydesign.com/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/jquery.scrollTo.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/jquery.nav.js"></script>
+<!--[if lt IE 9]>
+  <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+  <nav id="navigation">
+    <ul id="topnav">
+      <li class="current"><a href="#home">Homepage</a></li>
+      <li><a href="#company">The Company</a></li>
+      <li><a href="#portfolio">Client Portfolio</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+  
+  <div id="content">
+    <section id="home">
+      <div class="wrapper">
+        <!-- some content here -->
+      </div>
+    </section>
+    <!-- BG Image Source: http://www.flickr.com/photos/jepoirrier/8206441823/ -->
+    
+    <section id="company">
+      <div class="wrapper">
+        <h1>About our Studio</h1>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget scelerisque augue. Phasellus felis est, lobortis ut luctus commodo, venenatis eget arcu. Integer dolor elit, dictum at scelerisque vitae, semper ac sapien. Ut sed nunc sed eros varius ultrices et in libero.</p>
+        
+        <p>Nam a tempor sem. Donec vel mi dui. Suspendisse potenti. Sed adipiscing lorem non erat consequat vulputate. In hac habitasse platea dictumst. Sed pellentesque pulvinar sem non suscipit. Vestibulum cursus lectus ut magna gravida vel molestie diam ornare.</p>
+        
+        <p>Donec interdum, magna ut pulvinar aliquet, felis tellus lacinia leo, ullamcorper venenatis nisi lectus et nibh. Cras a lectus eros. Cras nec quam sed ligula ornare malesuada. Etiam volutpat purus sed justo semper vitae hendrerit lectus posuere. Nam et fermentum elit.</p>
+      </div>
+    </section>
+    
+    <section id="portfolio">
+      <div class="wrapper">
+        <h2>Sample Portfolio(Empty)</h2>
+      </div>
+    </section>
+    <!-- BG Image Source: http://www.flickr.com/photos/oimax/231024527/ -->
+    
+    <section id="contact">
+      <div class="wrapper">
+        <h1>Get In Touch</h1>
+        
+        <p>We love emails and will try to answer inquiries quickly and effeciently.</p>
+        
+        <form id="contactform" name="contactform" method="post" action="index.html">
+          <input type="text" name="name" id="name" class="cform" placeholder="Name...">
+          <input type="email" name="email" id="email" class="cform" placeholder="Email...">
+          <textarea name="message" id="message" class="txtarea"></textarea>
+        </form>
+      </div>
+    </section>
+  </div>
+  
+  <footer id="foot">
+    
+  </footer>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#topnav').onePageNav({
+    currentClass: 'current',
+	  scrollOffset: 0
+  });
+});
+</script>
+</body>
+</html>

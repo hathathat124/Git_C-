@@ -1,0 +1,521 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Masterpage_Roomloan.master.cs" Inherits="Room_Masterpage_Roomloan" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <%--<meta name="viewport" content="width=device-width, initial-scale=1">--%>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%--<meta name="viewport" content="width=device-width, initial-scale=1">--%>
+
+    <title>KU</title>
+     
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap2/css/bootstrap.css" rel="stylesheet">
+    <%--<link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">--%>
+    
+    <!-- Custom Fonts -->
+
+    <!-- Plugin CSS -->
+    <%--<link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">--%>
+
+    <!-- Theme CSS -->
+    <link href="../css/creative.css" rel="stylesheet">
+     
+    <link rel="stylesheet" media="all" type="text/css" href="../datepicker2/css/sunny/jquery-ui-1.9.2.custom.css" />
+    <%--<script src="../vendor/jquery/jquery.min.js"></script>--%><%--<script type="text/javascript" src="../datepicker3/js/jquery-1.4.4.min.js"></script>--%><%--<script type="text/javascript" src="../datepicker2/js/jquery-1.8.3.js"></script>--%><%--<script type="text/javascript" src="../datepicker2/js/jquery-1.8.3.js"></script>--%><%--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>--%><%--<script src="../vendor/jquery/jquery.min.js"></script>--%>
+  
+    <script type="text/javascript" src="../datepicker3/js/jquery-1.4.4.min.js"></script>
+    <%--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>--%>
+    <script type="text/javascript" src="../datepicker3/js/jquery-ui-1.8.10.offset.datepicker.min.js"></script>
+
+       <%--<link rel="stylesheet" media="all" type="text/css" href="../datepicker2/css/sunny/jquery-ui-1.9.2.custom.css" />--%><%--<script src="../vendor/jquery/jquery.min.js"></script>--%>    <%--<script type="text/javascript" src="../datepicker3/js/jsanother/jquery-ui-1.8.16.offset.datepicker.min.js"></script>--%>
+  
+    <%--<script type="text/javascript" src="../datepicker3/js/jquery-1.4.4.min.js"></script>--%><%--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>--%><%--<script type="text/javascript" src="../datepicker3/js/jquery-ui-1.8.10.offset.datepicker.min.js"></script>--%><%--<script type="text/javascript" src="    http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.js"></script>--%>        <%--<script type="text/javascript" src="    http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.js"></script>--%>      <%--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">--%><%--  <link rel="stylesheet" href="/resources/demos/style.css">--%>  <%--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>--%><%--  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>--%>
+
+        <script type="text/javascript">
+
+    
+
+        $(function () {
+
+            $('#datepickerr').datepicker({
+
+
+                monthNames: ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน',
+                    'กรกฏาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'],
+                monthNamesShort: ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.',
+                    'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'],
+                dayNames: ['อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์'],
+                dayNamesShort: ['อา.', 'จ.', 'อ.', 'พ.', 'พฤ.', 'ศ.', 'ส.'],
+                dayNamesMin: ['อา.', 'จ.', 'อ.', 'พ.', 'พฤ.', 'ศ.', 'ส.'],
+                dateFormat: 'dd MM yy',
+                firstDay: 0,
+                isRTL: false,
+                isBuddhist: true,
+                minDate: '0d',
+                maxDate: '' + ''
+            })
+        });
+
+
+</script>
+      <script>
+          $(function () {
+              $("#dialog").dialog();
+          });
+  </script>
+    <script type="text/javascript">
+          function ttt(txt)
+          {
+              alert('hi');
+              var at = txt.value;
+              alert(at);
+          }
+    </script>
+
+    <style>
+        
+ body {
+            background-color: #fff; /*rgb(22, 160, 133);*/
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            position: fixed;
+            left: -16em;
+            top: 0;
+            bottom: 0;
+            background-color: #4F514E;
+            border-right: 50px solid #169CCF;
+            box-shadow: 4px 0 5px rgba(0,0,0,0.2);
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .icon {
+            bottom:7.5em;
+            left: 6.7em;
+            display: block;
+            font-size: 30pt;
+            color: #169CCF;
+            position: absolute;
+            text-decoration: none;
+            font-family: 'Carrois Gothic', sans-serif;
+        }
+
+       
+
+       
+
+        nav ul {
+            width: 15em;
+            list-style-type: none;
+            margin: 0;
+            padding: 1em;
+        }
+
+            nav ul li {
+                width: 100%;
+                text-align: left;
+                padding: 4px 4px;
+                margin-top: 5px;
+                color: #fff;
+                background: transparent;
+                font-size: 20px;
+                float: left;
+                text-shadow: rgb(71, 73, 70) 1px 1px, rgb(71, 73, 70) 2px 2px, rgb(71, 73, 70) 3px 3px, rgb(71, 73, 70) 4px 4px, rgb(71, 73, 70) 5px 5px, rgb(71, 73, 70) 6px 6px, rgb(71, 73, 70) 7px 7px, rgb(71, 73, 70) 8px 8px, rgb(71, 73, 70) 9px 9px, rgb(71, 73, 70) 10px 10px, rgb(71, 73, 70) 11px 11px, rgb(71, 73, 70) 12px 12px, rgb(71, 73, 70) 13px 13px, rgb(71, 73, 70) 14px 14px, rgb(72, 74, 71) 15px 15px, rgb(72, 74, 71) 16px 16px;
+            }
+
+        nav a:link, nav a:visited {
+            display: block;
+            width: 100%;
+            font-weight: bold;
+            line-height: 2.5em;
+            text-indent: 10px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 4px;
+            outline: 0 none;
+        }
+
+        nav a:hover, nav a:focus {
+            color: #fff;
+            background-color: #4F514E;
+            text-shadow: 0 0 4px #fff;
+            /*box-shadow: inset 0 2px 2px #808080;*/
+        }
+
+        article, article:after, nav, nav * {
+            -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+        }
+
+            nav:hover {
+                left: 0;
+            }
+
+          
+
+                    nav1:hover ~ article:after {
+                        left: 160%;
+                    }
+
+article{
+  width:70%;
+  margin:auto;
+  text-align:center;
+}
+
+h1 {
+   text-shadow: rgb(230, 230, 230) 1px 1px,
+    rgb(230, 230, 230) 2px 2px,
+    rgb(230, 230, 230) 3px 3px,
+    rgb(230, 230, 230) 4px 4px,
+    rgb(230, 230, 230) 5px 5px,
+    rgb(230, 230, 230) 6px 6px,
+    rgb(230, 230, 230) 7px 7px,
+    rgb(230, 230, 230) 8px 8px,
+    rgb(230, 230, 230) 9px 9px,
+    rgb(230, 230, 230) 10px 10px,
+    rgb(230, 230, 230) 11px 11px,
+    rgb(230, 230, 230) 12px 12px,
+    rgb(231, 231, 231) 13px 13px,
+    rgb(232, 232, 232) 14px 14px,
+    rgb(234, 234, 234) 15px 15px,
+    rgb(235, 235, 235) 16px 16px,
+    rgb(236, 236, 236) 17px 17px,
+    rgb(238, 238, 238) 18px 18px,
+    rgb(239, 239, 239) 19px 19px,
+    rgb(241, 241, 241) 20px 20px,
+    rgb(242, 242, 242) 21px 21px,
+    rgb(243, 243, 243) 22px 22px,
+    rgb(245, 245, 245) 23px 23px,
+    rgb(246, 246, 246) 24px 24px,
+    rgb(248, 248, 248) 25px 25px,
+    rgb(249, 249, 249) 26px 26px,
+    rgb(250, 250, 250) 27px 27px,
+    rgb(252, 252, 252) 28px 28px,
+    rgb(253, 253, 253) 29px 29px,
+    rgb(255, 255, 255) 30px 30px;
+  color:#169CCF;
+  font-size: 75px;
+  text-align: center;
+}
+p{
+   text-align:left;
+
+                    	color: #576978;
+                    	list-style-type:none;
+                    	  font-family: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
+                          font-style: normal;
+                          font-size: 18px;
+                          line-height: 1;
+                          text-transform: uppercase;
+                          color: #677a82;
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body style="background: url(/images/latar.png)">
+
+<%--    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" style="background-color:white;color:blue" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                  
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background-color: rgb(150,150,150, 0);">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#promotion">เข้าสู่ระบบ</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#showdate">ดูตารางเวลาห้อง</a>
+                    </li>
+                 
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>--%>
+
+
+
+    <form id="form1" runat="server">
+
+        <%--<nav>
+        <span class="icon">&equiv;</span>
+        <ul>--%>
+
+                      <%-- <li class="lili"> <asp:HyperLink ID="hplterm" class="lili" Runat="server" NavigateUrl="~/Room/inserttimeperterm2.aspx" Text="เพิ่มเทอม"  ></asp:HyperLink> </li>          
+                       <li class="lili"> <asp:HyperLink ID="hplmemberloan" class="lili" Runat="server" NavigateUrl="~/Room/Member_loan.aspx" Text="ตรวจสอบการจอง"  ></asp:HyperLink> </li>          
+                       <li class="lili"> <asp:HyperLink ID="hplupdate" class="lili" Runat="server" NavigateUrl="~/Room/adminupdate.aspx" Text="ลบการจอง"  ></asp:HyperLink> </li>          
+
+                    <li class="lili">   <asp:HyperLink ID="hplsubject" class="lili" Runat="server" NavigateUrl="~/Room/insertsubject4.aspx" Text="เพิ่ม/ลบ รายวิชา"  ></asp:HyperLink>           </li>
+
+                    <li class="lili">   <asp:HyperLink ID="hplregister" class="lili" Runat="server" NavigateUrl="~/Room/register.aspx" Text="สมัครยูเซอร์" onclick="window.open (this.href, 'popupwindow',  'width=700,height=700,scrollbars,resizable'); return false;"></asp:HyperLink>           </li>
+                    <li class="lili">   <asp:HyperLink ID="hplmember" class="lili" Runat="server" NavigateUrl="~/Room/insertsubject4.aspx" Text="จัดการยูเซอร์"></asp:HyperLink>           </li>
+                     
+                    <li class="lili">   <asp:HyperLink ID="hplreport" class="lili" Runat="server" NavigateUrl="~/Room/insertsubject4.aspx" Text="รายงาน"></asp:HyperLink>           </li>
+
+                     <li class="lili"><b><a><asp:Button ID="Button6"  OnClick="logout_Click"  runat="server" Text="ออกจากระบบ" BackColor="#4F514E" BorderColor="#4F514E" BorderStyle="None" Font-Bold="True" Font-Size="X-Large" /></a></b></li>--%>
+
+<%--        </ul>
+    </nav>--%>
+        <%--<asp:HyperLink ID="hplterm" Visible="false" class="lili" Runat="server" NavigateUrl="~/Room/inserttimeperterm2.aspx" Text="เพิ่มเทอม"  ></asp:HyperLink>          
+        <asp:HyperLink ID="hplmemberloan" Visible="false" class="lili" Runat="server" NavigateUrl="~/Room/Member_loan.aspx" Text="ตรวจสอบการจอง"  ></asp:HyperLink>           
+        <asp:HyperLink ID="hplupdate" Visible="false" class="lili" Runat="server" NavigateUrl="~/Room/adminupdate.aspx" Text="ลบการจอง"  ></asp:HyperLink> 
+
+        <asp:HyperLink ID="hplsubject" Visible="false" class="lili" Runat="server" NavigateUrl="~/Room/insertsubject4.aspx" Text="เพิ่ม/ลบ รายวิชา"  ></asp:HyperLink>           
+
+        <asp:HyperLink ID="hplregister" Visible="false" class="lili" Runat="server" NavigateUrl="~/Room/register.aspx" Text="สมัครยูเซอร์" onclick="window.open (this.href, 'popupwindow',  'width=700,height=700,scrollbars,resizable'); return false;"></asp:HyperLink>           
+        <asp:HyperLink ID="hplmember" Visible="false" class="lili" Runat="server" NavigateUrl="~/Room/insertsubject4.aspx" Text="จัดการยูเซอร์"></asp:HyperLink>          
+                     
+        <asp:HyperLink ID="hplreport" Visible="false" class="lili" Runat="server" NavigateUrl="~/Room/insertsubject4.aspx" Text="รายงาน"></asp:HyperLink>           
+
+        <b><a><asp:Button ID="Button6" Visible="false"  OnClick="logout_Click"  runat="server" Text="ออกจากระบบ" BackColor="#4F514E" BorderColor="#4F514E" BorderStyle="None" Font-Bold="True" Font-Size="X-Large" /></a></b>--%>
+                               <asp:ScriptManager ID="MainScriptManager" runat="server" />
+
+
+    <div class="container-fluid">
+         
+        <%--<div class="row">
+                <span id="mainNav" class="" style="">
+                    <img style="height:80px;" src="/images/head_logo_sci.png" />
+                </span>
+            </div>--%>   
+        <div class="row" style="width:1350px; background:black">
+            <div class="row">
+                <div class="span6 offset5">
+                    
+                    <img style="height:80px;padding-left:40px" src="/images/head_logo_sci.png" />
+                
+                </div>
+                <div class="row">
+                    <div class="span12 offset3">
+                    <table  style="height: auto;width:900px;text-align:center;margin-bottom:10px">
+                     <tr  style="height:21px;background-color:black;text-align:center";>
+                       <td>
+                           <asp:HyperLink ID="hplterm" visible="true" class=" btn-primary btn" Runat="server" NavigateUrl="~/Room/inserttimeperterm2.aspx" Text="เพิ่มเทอม"  ></asp:HyperLink>          
+                    <asp:HyperLink ID="hplmemberloan" visible="true" class=" btn-primary btn" Runat="server" NavigateUrl="~/Room/Member_loan.aspx" Text="ตรวจสอบการจอง"  ></asp:HyperLink>           
+                     <asp:HyperLink ID="hplupdate" visible="true" class=" btn btn-primary" Runat="server" NavigateUrl="~/Room/adminupdate.aspx" Text="ลบการจอง"  ></asp:HyperLink> 
+                     <asp:HyperLink ID="hplsubject" visible="true" class=" btn-primary btn" Runat="server" NavigateUrl="~/Room/insertsubject4.aspx" Text="เพิ่ม/ลบ รายวิชา"  ></asp:HyperLink>           
+                     <asp:HyperLink ID="hplregister" visible="true" class=" btn-primary btn" Runat="server" NavigateUrl="~/Room/register.aspx" Text="สมัครยูเซอร์" onclick="window.open (this.href, 'popupwindow',  'width=1350,height=700,scrollbars,resizable'); return false;"></asp:HyperLink>           
+                     <asp:HyperLink ID="hplmember" visible="true" class=" btn-primary btn" Runat="server" NavigateUrl="~/Room/manageuser.aspx" Text="จัดการยูเซอร์"></asp:HyperLink>                               
+                     <%--<asp:HyperLink ID="hplreport" visible="true" class="lili btn-primary btn" Runat="server" NavigateUrl="~/Room/Chart.aspx" Text="รายงาน"></asp:HyperLink>--%>           
+                     <b><a><asp:Button ID="Button6" visible="true" CssClass="lili btn-danger btn"  OnClick="logout_Click"  runat="server" Text="ออกจากระบบ" BackColor="#4F514E" BorderColor="#4F514E" BorderStyle="None" float="right" Font-Bold="True"  /></a></b>                  
+                       </td>
+                     </tr>
+                                <tr><td></td></tr>
+                  </table>      
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            <div class="span12 ">
+                </div>
+            </div>
+               
+
+             
+                  <div class="row">
+                      <div class="span3" style="border-radius:70px 10px;border-top-left-radius:0px; margin-left:-4px;margin-top:-1px;padding-bottom:10px;background:#ffed80;border-color:black;border:5px medium black">
+                         <br />
+                            <img src="/images/Administrator.png"/>        
+                            <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                      </div>
+                      <div class="span9"></div>
+                  </div>
+                  <div class="row">
+                    
+                      <div class="span12">
+                            <div class="span10 offset4">
+                                <br />
+                                <asp:Label ID="Label16" runat="server" Text="ห้อง"></asp:Label>
+                                <asp:DropDownList ID="ddl_id_lab" runat="server" Font-Bold="True" BorderWidth="2px" BorderColor="GrayText" BackColor="#FFFFCC" Width="100px" AutoPostBack="True"></asp:DropDownList>
+                                <asp:Label ID="Label7" runat="server" Text="เลือกวันที่จอง"></asp:Label>
+                                <asp:TextBox ID="datepickerr" runat="server"  Visible="true" AutoCompleteType="Disabled" BackColor="#FFFFCC" BorderWidth="2px" BorderColor="GrayText" OnTextChanged="Page_Load" Enabled="true" Height="31px" ></asp:TextBox>
+                               
+                                &nbsp;<asp:Button ID="btnchooseday" class="btn btn-info" runat="server"  Text="เลือก" OnClick="Button1_Click"  />
+       
+                            
+
+                                
+                                &nbsp;<asp:Label ID="lblterm" runat="server" Text="Label"></asp:Label>
+                                &nbsp;<asp:Label ID="lblschool" runat="server" Text="Label"></asp:Label>
+                                <br /><br />
+                                <asp:Label ID="Label8" runat="server" Text="จองตั้งแต่"></asp:Label>
+                                <asp:DropDownList ID="Start_time" runat="server" BorderWidth="2px" BorderColor="GrayText"></asp:DropDownList>
+                                <asp:Label ID="Label9" runat="server" Text="สิ้นสุดที่"></asp:Label>
+                                <asp:DropDownList ID="End_time" runat="server" BorderWidth="2px" BorderColor="GrayText"></asp:DropDownList>                        
+                                <br />
+                                <asp:Label ID="Label17" runat="server" Text="ชื่อคนจอง"></asp:Label>
+                                &nbsp;<asp:TextBox ID="txtnameloan" BorderWidth="2px" BorderColor="GrayText" runat="server" AutoCompleteType="Disabled" Height="31px"></asp:TextBox>          
+                                เหตุที่จอง <asp:TextBox ID="txtreason" runat="server" BorderWidth="2px" BorderColor="GrayText" TextMode="MultiLine" AutoCompleteType="Disabled"></asp:TextBox> 
+                                &nbsp;&nbsp;
+                                <asp:Button ID="btnbooking" class="btn btn-success" runat="server"  Text="จอง" OnClick="Button2_Click" />               
+                                <br />
+                            </div>
+                          <div class="span14 offset1">
+                <%--<asp:Button ID="Button1" CssClass="btn" runat="server" Text="Button" OnClick="Button1_Click1" />--%>
+                     
+                             <%-- <asp:UpdatePanel runat="server" id="UpdatePanel" updatemode="Conditional">
+            <ContentTemplate>--%>
+                              <asp:Literal id="ltrlctrl1" runat="server" />
+                             
+                <asp:Label runat="server" id="DateTimeLabel1" />
+                <%--<asp:Button runat="server" id="UpdateButton1" onclick="UpdateButton_Click" text="Update" />               
+            </ContentTemplate>
+        </asp:UpdatePanel>
+     --%>
+                          </div>
+                       </div>
+                 </div>
+                 <div class="row">
+                    <div class="span14 offset1" style="padding-left:20px;">
+
+ 
+                <%--<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>--%>
+                    <table border="2" class="lab table-hover" width="1100" style="background:white;margin-top:20px;">
+                        <asp:Repeater id="myRepeater" runat="server" onItemDataBound="myRepeater_ItemDataBound">
+	                    <HeaderTemplate>
+                        <tr cellspacing="0" cellpadding="2"  style="background-color:#ffed80;">
+                            <th colspan="6" style="color:blue;background-color:#ffed80;"><h4>จองรายเทอม</h4></th>
+                        </tr>
+
+			            <tr  cellspacing="0" cellpadding="2"  style="background-color:aquamarine;">
+				            <%--<th style="text-align:center;">เลือก</th>--%>
+				            <th style="text-align:center;background-color:aquamarine;">ห้อง</th>
+				            <th style="text-align:center;background-color:aquamarine;">รหัสวิชา</th>
+				            <th style="text-align:center;background-color:aquamarine;">รายชื่อวิชา</th>
+				            <%--<th style="text-align:center;">วัน</th>--%>
+				            <th style="text-align:center;background-color:aquamarine;">เวลา</th>
+				            <%--<th style="text-align:center;">จนถึง</th>--%>
+				            <th style="text-align:center;background-color:aquamarine;">หมู่เรียน</th>
+				            <th style="text-align:center;background-color:aquamarine;">อ.ผู้สอน</th>
+
+                       </tr>
+	                </HeaderTemplate>
+	                <ItemTemplate>
+		               		 <tr style="background:rgba(188,224,238,1)">
+
+			                <td style="text-align:center;"><asp:Label id="lblroom" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblidsub" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblnamesub" runat="server"></asp:Label></td>
+                            <td style="text-align:center;"><asp:Label id="lblstart" runat="server"></asp:Label></td>
+<%--                            <td style="text-align:center;"><asp:Label id="lblend" runat="server"></asp:Label></td>--%>
+			                <td style="text-align:center;"><asp:Label id="lblsec" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblteacher" runat="server"></asp:Label></td>
+                      </tr>		
+	                </ItemTemplate>	
+                            <AlternatingItemTemplate>
+                            <tr bgcolor="#e8e8e8">
+                                <td style="text-align:center;"><asp:Label id="lblroom" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblidsub" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblnamesub" runat="server"></asp:Label></td>
+                            <td style="text-align:center;"><asp:Label id="lblstart" runat="server"></asp:Label></td>
+<%--                            <td style="text-align:center;"><asp:Label id="lblend" runat="server"></asp:Label></td>--%>
+			                <td style="text-align:center;"><asp:Label id="lblsec" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblteacher" runat="server"></asp:Label></td>
+                      </tr>		
+                        </AlternatingItemTemplate>
+	                </asp:Repeater>
+	             </table>
+
+                           <table border="2" class="lab table-hover "  style="width:1100px;background:white;margin-top:10px;">
+                    <asp:Repeater id="myRepeater2" runat="server" onItemDataBound="myRepeater2_ItemDataBound">
+	                <HeaderTemplate>		
+                        <tr cellspacing="0" cellpadding="2"  style="background-color:#ffed80;">
+                            <th colspan="6" style="color:blue;background-color:#ffed80;"><h4>จองรายวัน</h4></th>
+                        </tr>
+			            <tr  cellspacing="0" cellpadding="2"  style="background:#cde0fe;">
+				            <%--<th style="text-align:center;">เลือก</th>--%>
+				            <th style="text-align:center;background-color:aquamarine;">ห้อง</th>
+				            <th style="text-align:center;background-color:aquamarine;">ผู้จอง</th>
+				            <th style="text-align:center;background-color:aquamarine;">เวลา</th>
+				            <%--<th style="text-align:center;">จนถึง</th>--%>
+				            <th style="text-align:center;background-color:aquamarine;">วันที่จอง</th>
+				            <th style="text-align:center;background-color:aquamarine;">ณ เวลาที่ทำจอง</th>	
+				            <th style="text-align:center;background-color:aquamarine;">เหตุที่จอง</th>				                                        
+                       </tr>
+	                </HeaderTemplate>
+	                <ItemTemplate>
+		               		 <tr style="background:rgba(188,224,238,1)">
+
+			            <%--    <td><asp:CheckBox id="chkCustomerID" runat="server"></asp:CheckBox></td>	--%>
+			                <td style="text-align:center;"><asp:Label id="lblroom_b" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblid_b" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblstart_b" runat="server"></asp:Label></td>
+			                <%--<td style="text-align:center;"><asp:Label id="lblend_b" runat="server"></asp:Label></td>--%>
+                            <td style="text-align:center;"><asp:Label id="lbldateloan_b" runat="server"></asp:Label></td>
+                            <td style="text-align:center;"><asp:Label id="lbldate_b" runat="server"></asp:Label></td>
+                            <td style="text-align:center;"><asp:Label id="lblreason_b" runat="server"></asp:Label></td>
+                      </tr>		
+	                </ItemTemplate>
+                        <AlternatingItemTemplate>
+                            <tr bgcolor="#e8e8e8">
+                             <td style="text-align:center;"><asp:Label id="lblroom_b" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblid_b" runat="server"></asp:Label></td>
+			                <td style="text-align:center;"><asp:Label id="lblstart_b" runat="server"></asp:Label></td>
+			                <%--<td style="text-align:center;"><asp:Label id="lblend_b" runat="server"></asp:Label></td>--%>
+                            <td style="text-align:center;"><asp:Label id="lbldateloan_b" runat="server"></asp:Label></td>
+                            <td style="text-align:center;"><asp:Label id="lbldate_b" runat="server"></asp:Label></td>
+                            <td style="text-align:center;"><asp:Label id="lblreason_b" runat="server"></asp:Label></td>
+	              </tr>
+                        </AlternatingItemTemplate>
+
+                                </asp:Repeater>
+	                </table>
+              
+                    </div>
+                 </div>
+                 
+
+          </div>
+
+        
+        
+
+  
+        
+        
+        
+        
+         
+    </form>
+
+    
+       <!-- jQuery -->
+    <%--<th style="text-align:center;">เลือก</th>--%>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <%--<th style="text-align:center;">วัน</th>--%>
+    <!-- Theme JavaScript -->
+    <%--<script src="../js/creative.min.js"></script>--%>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+</body>
+
+</html>
+

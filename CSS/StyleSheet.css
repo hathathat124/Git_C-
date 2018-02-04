@@ -1,0 +1,43 @@
+﻿body {
+}
+
+@media (min-width: 576px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .top_header{
+        width:100%;
+        max-width:83.333%
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .top_header {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .top_header {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .top_header {
+        width: 100%;
+    }
+}
